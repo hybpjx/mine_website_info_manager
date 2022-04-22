@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>全国信息一览</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <h1>信息一览</h1>
+
+   
+    <ul>
+        {% for li in all_site %}
+
+        <li>
+            <td>省份:{{li.province}}</td>  
+            <td>城市： {{li.city}}</td> 
+            <td>县和区域：{{li.countrytown}}</td>  
+            <td>网站名：{{li.urlname}}</td>  
+            <td>省份:网址：{{li.url}}</td> 
+        </li>
+
+        {% endfor %}
+    </ul>
+
+
+
+    {% comment %} <div>
+        {{all_site.province}}
+    </div> {% endcomment %}
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+  </body>
+</html>
